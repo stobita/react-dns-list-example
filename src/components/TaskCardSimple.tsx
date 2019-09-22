@@ -1,13 +1,13 @@
 import React from "react";
 import { Task } from "../App";
-import { ItemTypes } from "../constants";
 import { useDrag } from "react-dnd";
+import { ItemTypes } from "../constants";
 
 interface Props {
   task: Task;
 }
 
-export const TaskCard = (props: Props) => {
+export const TaskCardSimple = (props: Props) => {
   const [{ isDragging }, drag] = useDrag({
     item: { id: props.task.id, type: ItemTypes.TASK },
     collect: monitor => ({
